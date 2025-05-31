@@ -29,8 +29,8 @@ export default function App() {
   useEffect(() => {
     document.body.addEventListener('click', (event) => {
       const isToggleClick = event.target.closest(".menu");
-      if (!isToggleClick) {closeHamuburger()};
-     })
+      if (!isToggleClick) { closeHamuburger() };
+    })
   }, []);
 
 
@@ -56,7 +56,7 @@ export default function App() {
         <div className="nav-main">
           <div className="flex">
             <ul>
-              <li>< NavLink to="/"><img className="formula" src={`/FormulaGroupFour/images/F1-logo.png`} /></NavLink></li>
+              <li>< NavLink to="/"><img className="formula" src={`${import.meta.env.BASE_URL}images/F1-logo.png`} /></NavLink></li>
             </ul>
 
             <ul>
