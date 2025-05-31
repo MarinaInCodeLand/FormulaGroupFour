@@ -52,7 +52,7 @@ export default function TeamsDetails(props) {
   }
 
   const imageWithFallback = (src) => {
-    const onImageError = () => imgRef.current.src = "/images/team.png";
+    const onImageError = () => imgRef.current.src =  "/images/team.png";
     return (
       <img ref={imgRef} src={src} onError={onImageError} />
     )
@@ -72,7 +72,7 @@ export default function TeamsDetails(props) {
         return (
           <div className="info-wraper" key={teamDetail.Constructor.constructorId}>
             <div className="info-containerOne">
-              <div className="team-img"><>{imageWithFallback(`/images/${teamDetail.Constructor.constructorId}.png`)} </></div>
+              <div className="team-img"><>{imageWithFallback(`/FormulaGroupFour/images/${teamDetail.Constructor.constructorId}.png`)} </></div>
               <div >
 
                 {/* Flags */}
