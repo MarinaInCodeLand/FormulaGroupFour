@@ -30,7 +30,7 @@ export default function AllRaces(props) {
 
 
     const getRaces = async () => {
-        const url = `http://ergast.com/api/f1/${props.selectedYear}/results/1.json`;
+        const url = `https://ergast.com/api/f1/${props.selectedYear}/results/1.json`;
         const response = await axios.get(url);
         setRaces(response.data.MRData.RaceTable.Races);
         setIsLoading(false);

@@ -48,8 +48,8 @@ export default function RacesDetails(props) {
 
     // Quailifiers
     const getRacesDetailsAndResults = async () => {
-        const qualifiersUrl = `http://ergast.com/api/f1/${props.selectedYear}/${params.racesId}/qualifying.json`;
-        const resultsUrl = `http://ergast.com/api/f1/${props.selectedYear}/${params.racesId}/results.json`;
+        const qualifiersUrl = `https://ergast.com/api/f1/${props.selectedYear}/${params.racesId}/qualifying.json`;
+        const resultsUrl = `https://ergast.com/api/f1/${props.selectedYear}/${params.racesId}/results.json`;
         const responseQualifiers = await axios.get(qualifiersUrl);
         const responseResults = await axios.get(resultsUrl);
         setRaces(responseResults.data.MRData.RaceTable.Races);
