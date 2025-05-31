@@ -56,7 +56,7 @@ export default function App() {
         <div className="nav-main">
           <div className="flex">
             <ul>
-              <li>< NavLink to="/"><img className="formula" src={`/images/F1-logo.png`} /></NavLink></li>
+              <li>< NavLink to="/"><img className="formula" src={`/FormulaGroupFour/images/F1-logo.png`} /></NavLink></li>
             </ul>
 
             <ul>
