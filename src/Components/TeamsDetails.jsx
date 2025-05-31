@@ -52,11 +52,19 @@ export default function TeamsDetails(props) {
   }
 
   const imageWithFallback = (src) => {
-    const onImageError = () => imgRef.current.src =  "/images/team.png";
+    const onImageError = () => {
+      if (imgRef.current) {
+        imgRef.current.src = "/FormulaGroupFour/images/team.png"
+      }
+    };
     return (
-      <img ref={imgRef} src={src} onError={onImageError} />
-    )
-  }
+      <img
+        ref={imgRef}
+        src={`/FormulaGroupFour/images/${src}`}
+        onError={onImageError}
+      />
+    );
+  };
 
 
   if (isLoading) {
@@ -72,7 +80,7 @@ export default function TeamsDetails(props) {
         return (
           <div className="info-wraper" key={teamDetail.Constructor.constructorId}>
             <div className="info-containerOne">
-              <div className="team-img"><>{imageWithFallback(`/FormulaGroupFour/images/${teamDetail.Constructor.constructorId}.png`)} </></div>
+              <div className="team-img">{imageWithFallback(`${teamDetail.Constructor.constructorId}.png`)}</div>
               <div >
 
                 {/* Flags */}
