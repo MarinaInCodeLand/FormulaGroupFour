@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Flag from 'react-flagkit';
 import { getCountryFlag } from "../helper/getFlag";
 

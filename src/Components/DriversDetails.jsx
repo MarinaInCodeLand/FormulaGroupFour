@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
 import Loader from "./Loader";
-import { useParams, useNavigate } from "react-router";
+import { useParams, useNavigate } from "react-router-dom";
 import Flag from "react-flagkit";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { getBgColor } from "../helper/getBgColor";
